@@ -162,6 +162,9 @@ class NET_EXPORT CookieMonster : public CookieStore {
   // only cookies.
   CookieList GetAllCookiesForURL(const GURL& url);
 
+  // number of cookies
+  int numCookies();
+
   // Deletes all of the cookies.
   int DeleteAll(bool sync_to_store);
   // Deletes all of the cookies that have a creation_date greater than or equal

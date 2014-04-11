@@ -622,6 +622,10 @@ CookieList CookieMonster::GetAllCookiesForURL(const GURL& url) {
   return GetAllCookiesForURLWithOptions(url, options);
 }
 
+int CookieMonster::numCookies() {
+   return cookies_.size();
+}
+
 int CookieMonster::DeleteAll(bool sync_to_store) {
   base::AutoLock autolock(lock_);
   if (sync_to_store)
